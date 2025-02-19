@@ -157,137 +157,35 @@
             </div>
         </section>
 
-        <!-- <form id="s4" class="calc">
+        <form id="s4" class="calc" style="background: url(src/img/calc.jpg) center/cover no-repeat; background-attachment: fixed;">
             <div class="title-position">
                 <div class="section-title padding">
                     <p class="title">Калькулятор</p>
                     <p class="descr">Рассчитать стоимость</p>
                 </div>
             </div>
-            <p class="calc-title">Укажите данные для расчета</p>
-            <div class="calc-wrap">
-        
-                <div class="item item-active item-first">
-                    <p class="header">Размеры</p>
-                    <span>
-                        <div>
-                            <p>Ширина</p>
-                            <input type="number" class="width" required>
-                        </div>
-        
-                        <div>
-                            <p>Длина</p>
-                            <input type="number" class="length" required>
-                        </div>
-        
-                        <div>
-                            <p>Высота</p>
-                            <input type="number" class="height" required>
-                        </div>
-                    </span>
-                </div>
-        
-                <div class="item">
-                    <p class="header">Зашивка</p>
-                    <span>
-                        <div class="variant">
-                            <p>Профлист</p>
-                            <label for="variant1">
-                                0.45мм
-                                <input type="radio" id="variant1" name="zashivka" required>
-                            </label>
-                            <label for="variant2">
-                                0.5мм
-                                <input type="radio" id="variant2" name="zashivka" required>
-                            </label>
-                        </div>
-        
-                        <div class="variant">
-                            <p>Сэндвич-панель</p>
-                            <label for="variant3">
-                                50мм
-                                <input type="radio" id="variant3" name="zashivka" required>
-                            </label>
-                            <label for="variant4">
-                                80мм
-                                <input type="radio" id="variant4" name="zashivka" required>
-                            </label>
-                            <label for="variant5">
-                                100мм
-                                <input type="radio" id="variant5" name="zashivka" required>
-                            </label>
-                        </div>
-                    </span>
-                </div>
-        
-                <div class="item">
-                    <p class="header">Ворота</p>
-                    <span>
-                        <div>
-                            <label for="vorota">
-                                <input type="radio" id="vorota" name="vorota" required>
-                                Распашные
-                            </label>
-                            
-                            <label for="vorota2">
-                                <input type="radio" id="vorota2" name="vorota" required>
-                                Роллет
-                            </label>
-        
-                            <label for="vorota3">
-                                <input type="radio" id="vorota3" name="vorota" required>
-                                Секционные ворота
-                            </label>
-                        </div>
-                    </span>
-                </div>
-                
-                <div class="item item-last">
-                    <p class="header">Данные для связи</p>
-                    <span>
-                        <label for="name">
-                            <p>Введите имя</p>
-                            <input type="text" id="name" name="name" placeholder="Введите имя" required>
-                        </label>
-                        <label for="phone">
-                            <p>Введите телефон</p>
-                            <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
-                        </label>
-                    </span>
-                    <button class="btn send" action="thanks.html">Отправить</button>
-                </div>
-        
-            </div>
-            <div class="btn-wrap">
-                <button class="btn btn-prev">Назад</button>
-                <button class="btn btn-next">Вперёд</button>
-            </div>
-        </form> -->
 
-        <form id="s4" class="calc">
-            <div class="title-position">
-                <div class="section-title padding">
-                    <p class="title">Калькулятор</p>
-                    <p class="descr">Рассчитать стоимость</p>
-                </div>
-            </div>
-            <p class="calc-title">Укажите данные для расчета</p>
-            <div class="calc-wrap">
-        
+            <div class="shadow"></div>
+
+            <!-- <p class="calc-title">Укажите данные для расчета</p> -->
+            <div class="calc-wrap">    
                 <div class="item item-active item-first">
-                    <p class="header">Размеры в метрах</p>
+                    <div class="section-title padding">
+                        <p class="title">Шаг 1/4</p>
+                        <p class="descr">Размеры в метрах</p>
+                    </div>
                     <span>
-                        <div>
+                        <div class="size">
                             <p>Ширина</p>
                             <input type="number" class="width">
                         </div>
         
-                        <div>
+                        <div class="size">
                             <p>Длина</p>
                             <input type="number" class="length">
                         </div>
         
-                        <div>
+                        <div class="size">
                             <p>Высота</p>
                             <input type="number" class="height">
                         </div>
@@ -295,17 +193,26 @@
                 </div>
         
                 <div class="item">
-                    <p class="header">Зашивка</p>
+                    <div class="section-title padding">
+                        <p class="title">Шаг 2/4</p>
+                        <p class="descr">Зашивка</p>
+                    </div>
                     <span>
                         <div class="variant">
                             <p>Профлист</p>
                             <label for="variant1">
                                 <input type="radio" id="variant1" name="zashivka">
                                 0.45мм
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div>
                             </label>
                             <label for="variant2">
                                 <input type="radio" id="variant2" name="zashivka">
                                 0.5мм
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div>
                             </label>
                         </div>
         
@@ -314,51 +221,77 @@
                             <label for="variant3">
                                 <input type="radio" id="variant3" name="zashivka">
                                 50мм
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div>
                             </label>
                             <label for="variant4">
                                 <input type="radio" id="variant4" name="zashivka">
                                 80мм
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div>
                             </label>
                             <label for="variant5">
                                 <input type="radio" id="variant5" name="zashivka">
                                 100мм
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div>
                             </label>
                         </div>
                     </span>
                 </div>
         
                 <div class="item">
-                    <p class="header">Ворота</p>
+                    <div class="section-title padding">
+                        <p class="title">Шаг 3/4</p>
+                        <p class="descr">Ворота</p>
+                    </div>
                     <span>
                         <div>
                             <label for="vorota">
                                 <input type="radio" id="vorota" name="vorota">
                                 Распашные
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div>
                             </label>
         
                             <label for="vorota2">
                                 <input type="radio" id="vorota2" name="vorota">
                                 Роллет
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div> 
                             </label>
         
                             <label for="vorota3">
                                 <input type="radio" id="vorota3" name="vorota">
                                 Секционные ворота
+                                <div class="mark">
+                                    <img src="src/img/check.png" alt="">
+                                </div>
                             </label>
                         </div>
                     </span>
                 </div>
         
                 <div class="item item-last">
-                    <p class="header">Данные для связи</p>
+                    <div class="section-title padding">
+                        <p class="title">Шаг 4/4</p>
+                        <p class="descr">Данные для связи</p>
+                    </div>
                     <span>
                         <label for="name">
-                            <p>Введите имя</p>
-                            <input type="text" id="name" name="name" placeholder="Введите имя">
+                            <!-- <p>Введите имя</p> -->
+                            <img src="src/img/user.png" alt="">
+                            <input type="text" id="name" class="data" name="name" placeholder="Введите имя">
                         </label>
                         <label for="phone">
-                            <p>Введите телефон</p>
-                            <input type="tel" class="tel" id="phone" name="phone" placeholder="Введите телефон">
+                            <!-- <p>Введите телефон</p> -->
+                            <img src="src/img/phone.png" alt="">
+                            <input type="tel" class="tel data" id="phone" name="phone" placeholder="Введите телефон">
                         </label>
                     </span>
                     <button class="btn send" action="thanks.html">Отправить</button>
