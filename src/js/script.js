@@ -75,19 +75,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btnSend.addEventListener('click', function(e) {
         e.preventDefault();
-
+    
+        const phoneInput = document.querySelector('#phone');
         const allInputs = document.querySelectorAll('input[type="text"], input[type="tel"], input[type="number"], input[type="radio"]:checked');
+        
         const allFilled = Array.from(allInputs).every(input => {
             if (input.type === 'radio') {
                 return input.checked; // Проверяем только радиокнопки
             }
             return input.value.trim() !== ''; // Проверяем текстовые и числовые поля
         });
-
-        if (!allFilled) {
-            alert('Заполните пожалуйста все поля!');
+    
+        // Проверка, что номер телефона введен полностью
+        const phonePattern = /^\+375 \(\d{2}\) \d{3} - \d{2} - \d{2}$/;
+        const isPhoneValid = phonePattern.test(phoneInput.value);
+    
+        if (!allFilled || !isPhoneValid) {
+            alert('Заполните пожалуйста все поля корректно!');
         } else {
             console.log('Все поля заполнены. Отправка данных...');
+            // Очистка полей формы
+            document.querySelector('.calc').reset(); // Сбрасывает все поля формы
             window.location.href = 'thanks.html'; // Перенаправление на страницу "thanks.html"
         }
     });
