@@ -36,6 +36,10 @@ html {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 label {
     cursor: pointer;
     display: flex;
@@ -76,6 +80,40 @@ section {
 body {
     font-family: "Open Sans", serif;
 }
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: .3s ease-in-out;
+    z-index: 999;
+}
+
+.header-logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.header-link {
+    font-weight: 300;
+    margin-right: 50px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.hidden {
+    margin-top: -100%;
+}
+
 
 .btn {
     padding: 10px 20px;
@@ -523,11 +561,25 @@ form button {
 
 footer {
     width: 100%;
+    padding: 20px 50px;
     height: 300px;
     background: var(--bg-1);
 }
 
 @media screen and (min-width: 100px) and (max-width: 1200px) {
+    .header {
+        padding: 20px 5px;
+    }
+
+    .header-logo {
+        font-size: 14px;
+    }
+
+    .header-link {
+        margin-right: 5px;
+        font-size: 15px;
+    }
+
     .padding {
         margin: 0 0 0 20px;
     }
@@ -572,10 +624,6 @@ footer {
     .bg-right {
         width: calc(100dvw - 50px);
     }
-
-    /* .screen {
-        height: 565px;
-    } */
 
     .screen-wrap {
         margin: 20px 0 0 20px;

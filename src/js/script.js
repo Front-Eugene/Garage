@@ -1,3 +1,33 @@
+// Анимация шапки
+let lastScrollY = window.scrollY;
+let ticking = false;
+let showThreshold = 100;
+
+function handleScroll() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > showThreshold) {
+        // Прокрутка вниз – показываем шапку
+        document.querySelector(".header").classList.remove("hidden");
+    } else {
+        // Прокрутка вверх – скрываем шапку
+        document.querySelector(".header").classList.add("hidden");
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(handleScroll);
+        ticking = true;
+    }
+}
+
+window.addEventListener("scroll", requestTick);
+
+
 // Плавная прокрутка при нажатии на якорные ссылки
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -31,12 +61,6 @@ function setActiveLink() {
 
 // Слушаем события прокрутки
 window.addEventListener('scroll', setActiveLink);
-
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const btnPrev = document.querySelector('.btn-prev');
@@ -93,17 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!allFilled || !isPhoneValid) {
             alert('Заполните пожалуйста все поля корректно!');
         } else {
+            
             console.log('Все поля заполнены. Отправка данных...');
             // Очистка полей формы
             document.querySelector('.calc').reset(); // Сбрасывает все поля формы
-            window.location.href = 'thanks.html'; // Перенаправление на страницу "thanks.html"
+            window.location.href = '/thanks.html'; // Перенаправление на страницу "thanks.html"
         }
     });
 });
-
-
-
-
 
 
 // МАСКА ТЕЛЕФОНА

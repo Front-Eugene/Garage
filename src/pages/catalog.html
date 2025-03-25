@@ -8,22 +8,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>GARAGE</title>
 </head>
+
+<style>
+    .screen-key div {
+        width: 30%;
+    }
+
+    @media screen and (min-width: 100px) and (max-width: 1200px) {
+        .screen-key div {
+            width: 100%;
+        }
+
+        .screen-wrap h1 {
+            margin-left: 0;
+        }
+    }
+</style>
+
 <body>
     <header class="header hidden">
-        <a href="index.html" class="header-logo">GARAGE</a>
+        <a href="../../index.html" class="header-logo">GARAGE</a>
         <div>
             <a href="" class="header-link">О нас</a>
-            <a href="src/pages/catalog.html" class="header-link">Каталог</a>
+            <a href="catalog.html" class="header-link">Каталог</a>
             <a href="" class="header-link">Статьи</a>
             <a href="" class="header-link">Контакты</a>
         </div>
     </header>
 
     <main>
-        <div class="navigation">
+        <!-- <div class="navigation">
             <div class="wrap">
                 <a href="#s1" class="active-link"></a>
                 <a href="#s2"></a>
@@ -32,29 +49,32 @@
                 <a href="#s5"></a>
                 <a href="#s6"></a>
             </div>
-        </div>
+        </div> -->
+
+        
+<!--          
         <section id="s1" class="screen">
             <div class="bg-left">
-                <img src="src/img/main-img5.png" alt="">
+                <img src="../img/main-img5.png" alt="">
             </div>
             <div class="bg-right">
                 <div class="screen-wrap">
                     <div class="social">
                         <a href="" style="background: #239bd7;">
                             <div style="padding-right: 5px;">
-                                <img src="src/img/telegram.png" alt="">
+                                <img src="../img/telegram.png" alt="">
                             </div>  
                         </a>
                         
                         <a href="" style="background: #7b519c;">
                             <div>
-                                <img src="src/img/viber.png" alt="">
+                                <img src="../img/viber.png" alt="">
                             </div>
                         </a>
 
                         <a href="" style="background: #14990a;">
                             <div style="padding-left: 4px;">
-                                <img src="src/img/whatsapp.png" alt="">
+                                <img src="../img/whatsapp.png" alt="">
                             </div>
                         </a>
                     </div>
@@ -70,34 +90,39 @@
                     </div>
                     
                     <h1>
-                        Строительство <br>
-                        хозблоков
-                        и гаражей 
+                        Гаражи и хозблоки <br>
+                        Каталаог
                     </h1>
 
                     <div class="screen-key">
                         <div>
-                            <img src="src/img/key-1.png" alt="">
+                            <img src="../img/key-1.png" alt="">
                             <span>
                                 <p>«под ключ» от</p> 
                                 <p class="screen-day">15 дней</p>
                             </span>
                         </div>
                         <div>
-                            <img src="src/img/quality.png" alt="">
+                            <img src="../img/key-1.png" alt="">
+                            <span>
+                                <p>Возможна доставка и сборка</p>
+                            </span>
+                        </div>
+                        <div>
+                            <img src="../img/key-1.png" alt="">
                             <p class="screen-guarantee">
-                                По современной технологии, с оффициальной гарантией до 7 лет и экономией бюджета до 30%
+                                Возможна установка окон, дверей, снегозадержателей
                             </p>
                         </div>
                     </div>
-                    <a href="#s4">
+                     <a href="#s4">
                         <button class="btn screen-btn">Рассчитать стоимость</button>
                     </a>
                 </div>
             </div>
         </section>
-
-        <section id="s2" class="numbers" style="background: url(src/img/number.webp) center/cover no-repeat; background-attachment: fixed;">
+        
+        <section id="s2" class="numbers" style="background: url(../img/number.webp) center/cover no-repeat; background-attachment: fixed;">
             <div class="shadow"></div>
             <div class="numbers-wrap">
                 <div>
@@ -126,7 +151,7 @@
             </div>
             <div class="hit-wrap">
                 <div class="item">
-                    <img src="src/img/main-img.png" alt="">
+                    <img src="../img/main-img.png" alt="">
                     <p class="name">Название</p>
                     <p class="descr">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -138,7 +163,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="src/img/main-img2.png" alt="">
+                    <img src="../img/main-img2.png" alt="">
                     <p class="name">Название</p>
                     <p class="descr">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -150,7 +175,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="src/img/main-img3.png" alt="">
+                    <img src="../img/main-img3.png" alt="">
                     <p class="name">Название</p>
                     <p class="descr">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -164,7 +189,7 @@
         </section>
 
         <section id="s4">
-            <form class="calc" style="background: url(src/img/calc.jpg) center/cover no-repeat; background-attachment: fixed;">
+            <form class="calc" style="background: url(../img/calc.jpg) center/cover no-repeat; background-attachment: fixed;">
                 <div class="title-position">
                     <div class="section-title padding">
                         <p class="title">Калькулятор</p>
@@ -174,7 +199,6 @@
 
                 <div class="shadow"></div>
 
-                <!-- <p class="calc-title">Укажите данные для расчета</p> -->
                 <div class="calc-wrap">    
                     <div class="item item-active item-first">
                         <div class="section-title padding">
@@ -211,14 +235,14 @@
                                     <input type="radio" id="variant1" name="zashivka" checked>
                                     0.45мм
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div>
                                 </label>
                                 <label for="variant2">
                                     <input type="radio" id="variant2" name="zashivka">
                                     0.5мм
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div>
                                 </label>
                             </div>
@@ -229,21 +253,21 @@
                                     <input type="radio" id="variant3" name="zashivka">
                                     50мм
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div>
                                 </label>
                                 <label for="variant4">
                                     <input type="radio" id="variant4" name="zashivka" checked>
                                     80мм
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div>
                                 </label>
                                 <label for="variant5">
                                     <input type="radio" id="variant5" name="zashivka">
                                     100мм
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div>
                                 </label>
                             </div>
@@ -261,7 +285,7 @@
                                     <input type="radio" id="vorota" name="vorota">
                                     Распашные
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div>
                                 </label>
             
@@ -269,7 +293,7 @@
                                     <input type="radio" id="vorota2" name="vorota" checked>
                                     Роллет
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div> 
                                 </label>
             
@@ -277,7 +301,7 @@
                                     <input type="radio" id="vorota3" name="vorota">
                                     Секционные ворота
                                     <div class="mark">
-                                        <img src="src/img/check.png" alt="">
+                                        <img src="../img/check.png" alt="">
                                     </div>
                                 </label>
                             </div>
@@ -291,11 +315,11 @@
                         </div>
                         <span class="contact-data">
                             <label for="name">
-                                <img src="src/img/user.png" alt="">
+                                <img src="../img/user.png" alt="">
                                 <input type="text" id="name" class="data" name="name" placeholder="Введите имя" min="2">
                             </label>
                             <label for="phone">
-                                <img src="src/img/phone.png" alt="">
+                                <img src="../img/phone.png" alt="">
                                 <input type="tel" class="tel data" id="phone" name="phone" placeholder="Введите телефон" min="23">
                             </label>
                         </span>
@@ -309,20 +333,28 @@
                 </div>
             </form>
         </section>
+ -->
+
 
         <section id="s5" class="category">
             <div class="title-position">
                 <div class="section-title padding">
-                    <p class="title">Каталог</p>
+                    <!-- <p class="title">Каталог гаражей и хозблоков</p> -->
+                    <h1 class="title">Каталог гаражей и хозблоков</h1>
                     <p class="descr">Разновиднтси построек</p>
                 </div>
             </div>
             <div class="category-wrap">
                 <div class="item">
-                    <img src="src/img/main-img4.png" alt="">
+                    <img src="../img/main-img4.png" alt="">
                     <div class="descr">
-                        <h2>Категория 1</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa? Illum animi explicabo quisquam blanditiis in sint ex, dignissimos, cum optio quibusdam voluptatibus quod delectus quam. Soluta et nostrum aliquam!</p>
+                        <h2>Гараж металлический с двускатной крышей <br> 6м х 4м</h2>
+                        <p>
+                            Двускатная крыша. Распашные ворота: высота 2.3м х ширина 3м. 
+                            В воротах установлена нажимная ручка с замком, засовы для 
+                            фиксации створки. Высота стен: 2.3м. Каркас из стальной профильной 
+                            трубы, обработан эпоксидным грунтом. Толщина зашивки стен: 0,5мм
+                        </p>
                         <a href="">
                             <button class="btn">Перейти</button>
                         </a>
@@ -330,7 +362,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="src/img/main-img4.png" alt="">
+                    <img src="../img/main-img4.png" alt="">
                     <div class="descr">
                         <h2>Категория 2</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa? Illum animi explicabo quisquam blanditiis in sint ex, dignissimos, cum optio quibusdam voluptatibus quod delectus quam. Soluta et nostrum aliquam!</p>
@@ -341,7 +373,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="src/img/main-img4.png" alt="">
+                    <img src="../img/main-img4.png" alt="">
                     <div class="descr">
                         <h2>Категория 3</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa? Illum animi explicabo quisquam blanditiis in sint ex, dignissimos, cum optio quibusdam voluptatibus quod delectus quam. Soluta et nostrum aliquam!</p>
@@ -352,6 +384,8 @@
                 </div>
             </div>
         </section>
+
+<!-- 
 
         <section id="s6" class="review">
             <div class="title-position">
@@ -367,11 +401,11 @@
                             Иван Абрамов
                         </div>
                         <div class="star-wrap">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
                         </div>
                     </div>
                     <p>
@@ -388,11 +422,11 @@
                             Иван Абрамов
                         </div>
                         <div class="star-wrap">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-2.png" alt="">
-                            <img src="src/img/star-2.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-2.png" alt="">
+                            <img src="../img/star-2.png" alt="">
                         </div>
                     </div>
                     <p>
@@ -409,11 +443,11 @@
                             Иван Абрамов
                         </div>
                         <div class="star-wrap">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-1.png" alt="">
-                            <img src="src/img/star-2.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-1.png" alt="">
+                            <img src="../img/star-2.png" alt="">
                         </div>
                     </div>
                     <p>
@@ -425,12 +459,14 @@
                 </div>
             </div>
         </section>
+ -->
+
     </main>
 
     <footer>
         <h2>ПОДВАЛ</h2>
     </footer>
 
-    <script src="src/js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
